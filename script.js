@@ -21,11 +21,13 @@ function sendMessage() {
         botEmoji.textContent = "🤖"; // Bot emoji
         botResponse.appendChild(botEmoji);
 
-        // Example responses based on user input
+        // Multiple lines of bot's response
         if (userInput.toLowerCase().includes("hello")) {
-            botResponse.textContent += "Hello! How can I assist you today?";
+            botResponse.textContent += "\nHello! How can I assist you today?\nI'm here to help you with anything you need!";
+        } else if (userInput.toLowerCase().includes("stock")) {
+            botResponse.textContent += "\nYou can ask me for stock market updates!\nJust tell me what stock you're interested in!";
         } else {
-            botResponse.textContent += "Sorry, I didn’t understand that.";
+            botResponse.textContent += "\nSorry, I didn't understand that.\nCan you please rephrase?";
         }
 
         document.getElementById("chatlog").appendChild(botResponse);
