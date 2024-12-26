@@ -8,17 +8,18 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('chicha-logo.png');  /* Add your logo here */
-    background-size: cover; /* This will make the logo cover the entire background */
-    background-position: center center; /* Center the logo */
-    background-repeat: no-repeat; /* Avoid repeating the background */
-    opacity: 0.1; /* Make the background logo faint so it doesn't overpower */
+    background-image: url('chicha-logo.png');  /* Ensure this is your high-quality logo */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.1;
 }
 
 /* Chat container styling */
 .chat-container {
     position: relative;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background to make the logo visible */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     width: 380px;
@@ -59,5 +60,5 @@ body {
 /* Bot emoji styling */
 .bot-message span {
     margin-right: 10px;
-    font-size: 24px;
+    font-size: 24px; /* Emoji size */
 }
