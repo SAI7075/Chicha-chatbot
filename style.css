@@ -1,77 +1,63 @@
+/* Apply logo to the background */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    background-image: url('chicha-logo.png');  /* Add your logo here */
+    background-size: cover; /* This will make the logo cover the entire background */
+    background-position: center center; /* Center the logo */
+    background-repeat: no-repeat; /* Avoid repeating the background */
+    opacity: 0.1; /* Make the background logo faint so it doesn't overpower */
 }
 
+/* Chat container styling */
 .chat-container {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background to make the logo visible */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     width: 380px;
-    background-color: #fff;
-    border-radius: 10px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
 }
 
-.chatbox {
-    max-height: 400px;
+/* Message styling */
+#chatlog {
+    flex-grow: 1;
     overflow-y: auto;
-    margin-bottom: 15px;
-}
-
-.chatlog {
-    display: flex;
-    flex-direction: column;
-}
-
-.bot-message, .user-message {
-    padding: 10px;
     margin-bottom: 10px;
-    border-radius: 5px;
-    max-width: 75%;
+    padding-right: 10px;
 }
 
-.bot-message {
-    background-color: #d1f7ff;
-    align-self: flex-start;
+/* User and bot message styles */
+.user-message, .bot-message {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    max-width: 80%;
+    clear: both;
 }
 
 .user-message {
-    background-color: #e3f9e5;
+    background-color: #cfe9fe;
     align-self: flex-end;
 }
 
-input {
-    width: 75%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
+.bot-message {
+    background-color: #e1e1e1;
+    align-self: flex-start;
+}
+
+/* Bot emoji styling */
+.bot-message span {
     margin-right: 10px;
-    font-size: 16px;
-}
-
-button {
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #5fa8d3;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #4c94b3;
-}
-
-@media (max-width: 600px) {
-    .chat-container {
-        width: 100%;
-        padding: 10px;
-    }
+    font-size: 24px;
 }
