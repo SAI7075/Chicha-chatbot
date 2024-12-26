@@ -16,18 +16,16 @@ function sendMessage() {
         var botResponse = document.createElement("div");
         botResponse.classList.add("bot-message");
 
+        // Add bot emoji before the bot's response
+        var botEmoji = document.createElement("span");
+        botEmoji.textContent = "🤖"; // Bot emoji
+        botResponse.appendChild(botEmoji);
+
         // Example responses based on user input
         if (userInput.toLowerCase().includes("hello")) {
-            botResponse.textContent = "Hello! How can I assist you today?";
-        } else if (userInput.toLowerCase().includes("how are you")) {
-            botResponse.textContent = "I'm just a bot, but I'm doing great! Thanks for asking.";
-        } else if (userInput.toLowerCase().includes("stock")) {
-            botResponse.textContent = "I can't fetch live stock prices right now, but you can check them on a financial website.";
-        } else if (userInput.toLowerCase().includes("time")) {
-            const currentTime = new Date().toLocaleTimeString();
-            botResponse.textContent = `The current time is: ${currentTime}`;
+            botResponse.textContent += "Hello! How can I assist you today?";
         } else {
-            botResponse.textContent = "Sorry, I didn't understand that. Try asking something else!";
+            botResponse.textContent += "Sorry, I didn’t understand that.";
         }
 
         document.getElementById("chatlog").appendChild(botResponse);
