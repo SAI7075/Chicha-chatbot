@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chicha Chatbot</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your updated CSS file -->
+    <title>Simple Chatbot</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Chatbot container -->
-    <div class="chat-container" id="chatbox">
-        <div id="chatlog"></div>
-        <input type="text" id="user-input" placeholder="Type your message..." />
-        <button onclick="sendMessage()">Send</button>
+    <div class="chatbox">
+        <div class="chatbox-header">
+            <h3>My Chatbot</h3>
+        </div>
+        <div class="chatbox-content" id="chatbox-content">
+            <!-- Chat messages will appear here -->
+        </div>
+        <input type="text" id="user-input" placeholder="Type your message..." onkeydown="if(event.key === 'Enter'){sendMessage()}">
+        <div id="typing-indicator" class="typing-indicator">...</div>
     </div>
 
-    <script src="script.js"></script> <!-- Link to your updated JS file -->
+    <script src="script.js"></script>
 </body>
 </html>
